@@ -1,101 +1,129 @@
-* {
-    background-color:thistle;
+/* Estilos globales */
+body {
+  background-color: thistle;
 }
+
 h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  letter-spacing: 6px;
+  color: mediumvioletred;
+}
+
+@media (max-width: 768px) {
+  h1 {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 6px;
     color: mediumvioletred;
+  }
 }
 
-h2, h3{
+h2, h3 {
+  font-family: "Mulish", sans-serif;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  h2, h3 {
     font-family: "Mulish", sans-serif;
     color: gray;
+    font-size: 20px;
+  }
+  }
+
+
+.texto-centro {
+  text-align: center;
+  padding: 2%;
 }
 
-.texto-centro{
-    text-align: center;
+.imagen-centro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
-.imagen-centro{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-}
-.media {
-    width: 30%;
-}
-
-#columna-div {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.columna {
-    width: 45%;
-    max-width: 300px;
-    padding: 10px;
+#sombra {
+  border-radius: 8px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 p {
-    font-family: "Josefin Sans", sans-serif;
-    margin: 0 0 10px 0;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0 0 10px 0;
 }
 
-#sombra{
-    border-radius: 8px;
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+/* Estilos para los botones */
+.multi-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 30%; /* Limitar ancho máximo del contenedor de botones */
+  flex-wrap: wrap; /* Permitir que los botones se ajusten al ancho */
+  padding: 1%;
 }
 
-a button{
-    font-size: 20px;
-    padding: .5em 1em;
-    background: #fff;
-    color: #4A5568;
-    border: 0px solid #A0AEC0;
-    margin: .1em;
-    transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
-    box-shadow: 0 0 0 #BEE3F8;
-    transform: translateY(0);
-  }
+.multi-button a {
+  flex: 1; /* Distribuir el espacio equitativamente entre los enlaces */
+}
 
-  .multi-button .first-button button{
-    border-radius: .5em 0 0 .5em;
-  }
-  .multi-button .last-button button{
-    border-radius: 0 .5em .5em 0;
-  }
-  a button i{
-    color: #A0AEC0;
-    margin-right: .3em;
-    transition: all .2s ease-out;
-  }
-  .multi-button:hover a button{
-    color: #A0AEC0;
-  }
-  
-  .multi-button:hover a button:hover{
-    background: #D53F8C;
-    color: #fff;
-    box-shadow: 0 0 0.8em 0 rgba(213, 63, 140, .8);
-    transform: translateY(-.2em);
-  }
-  .multi-button:hover a button i{
-    color: #CBD5E0;
-  }
-  .multi-button:hover a button:hover i{
-    color: #FED7E2;
-    transform: rotate(-10deg);
-  }
+a button {
+  font-size: 20px;
+  padding: .5em 1em;
+  background: #fff;
+  color: #4A5568;
+  border: 0px solid #A0AEC0;
+  margin: .1em;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+  box-shadow: 0 0 0 #BEE3F8;
+  transform: translateY(0);
+  width: 100%;
+}
 
-  .multi-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Centering the container itself */
-    margin-bottom: 10px;
-    margin-top: 10px;
+.multi-button button {
+  border-radius: .5em;
+}
+
+a button i {
+  color: #A0AEC0;
+  margin-right: .3em;
+  transition: all .2s ease-out;
+}
+
+.multi-button:hover a button {
+  color: #A0AEC0;
+}
+
+.multi-button:hover a button:hover {
+  background: #D53F8C;
+  color: #fff;
+  box-shadow: 0 0 0.8em 0 rgba(213, 63, 140, .8);
+  transform: translateY(-.2em);
+}
+
+.multi-button:hover a button i {
+  color: #CBD5E0;
+}
+
+.multi-button:hover a button:hover i {
+  color: #FED7E2;
+  transform: rotate(-10deg);
+}
+
+/* Estilos responsivos para pantallas medianas y pequeñas */
+@media (max-width: 768px) {
+  .multi-button a {
+      flex: 1; /* Ajuste equitativo botones */
+  }
+}
+
+  a button {
+      font-size: 13px; /* Tamaño letra en botones mas pequeño */
+      padding: 0.4em; /* Reducir relleno para ajustar tamaño de los botones */
   }
